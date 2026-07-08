@@ -1,4 +1,4 @@
-function 消灯 () {
+function 全消灯 () {
     pins.analogWritePin(AnalogPin.P0, 0)
     pins.analogWritePin(AnalogPin.P1, 0)
     pins.analogWritePin(AnalogPin.P2, 0)
@@ -12,15 +12,15 @@ function 黄 () {
 function 赤 () {
     pins.analogWritePin(AnalogPin.P2, 255)
 }
-消灯()
+全消灯()
 basic.forever(function () {
     青()
     basic.pause(1000)
-    消灯()
+    全消灯()
     黄()
     basic.pause(1000)
-    消灯()
+    全消灯()
     赤()
     basic.pause(1000)
-    消灯()
+    全消灯()
 })
